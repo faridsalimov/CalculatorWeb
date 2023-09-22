@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter');
+
+:root {
+    --dark-body-color: rgba(40, 40, 40);
+    --dark-calculator-color: rgba(50, 50, 50);
+    --dark-text-color: white;
+    --dark-button-color: rgba(80, 80, 80);
+	--dark-hover-button-color: rgba(150, 150, 150);
+
+    --light-body-color: white;
+    --light-calculator-color: white;
+    --light-text-color: black;
+    --light-button-color: whitesmoke;
+    --light-hover-button-color: rgba(220, 220, 220);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.calculator {
+    max-width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 1px rgb(200, 200, 200);
+}
+
+.screen {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    text-align: right;
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: "Inter";
+}
+
+#switch-theme-button {
+    position: relative;
+    left: 44%;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px 100px 0;
+}
+
+.underline {
+    height: 5px;
+    margin: 20px 50px 0 50px;
+    border-radius: 5px;
+}
+
+.light-mode .underline {
+    background-color: var(--light-text-color);
+}
+
+.dark-mode .underline {
+    background-color: var(--dark-text-color);
+}
+
+
+body .light-mode {
+    background-color: var(--light-body-color);
+}
+
+body .dark-mode {
+    background-color: var(--dark-body-color);
+}
+
+
+.light-mode button {
+    color: var(--light-text-color);
+    background-color: var(--light-button-color);
+}
+
+.dark-mode button {
+    color: var(--dark-text-color);
+    background-color: var(--dark-button-color);
+}
+
+
+.light-mode button:hover {
+    color: var(--light-text-color);
+    background-color: var(--light-hover-button-color);
+}
+
+.dark-mode button:hover {
+    color: var(--dark-text-color);
+    background-color: var(--dark-hover-button-color);
+}
+
+
+.light-mode input[type="text"] {
+    color: var(--light-text-color);
+    background-color: var(--light-body-color);
+}
+
+.dark-mode input[type="text"] {
+    color: var(--dark-text-color);
+    background-color: var(--dark-body-color);
+}
